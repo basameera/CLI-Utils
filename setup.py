@@ -1,6 +1,7 @@
 from setuptools import setup
 from clu import __version__, __author__, __author_email__
 
+
 def readme():
     with open('README.md') as f:
         README = f.read()
@@ -19,12 +20,13 @@ setup(
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",
+        "Operating System :: POSIX :: Linux",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",
     ],
     packages=["clu"],
     include_package_data=True,
-    # install_requires=["requests"],
+    install_requires=["pipreqs"],
     entry_points={
         "console_scripts": [
             "clu=clu.cli:main",
