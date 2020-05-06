@@ -3,12 +3,6 @@ from .utils import good, bad
 from .vsr import VERSION
 import os
 import pkg_resources
-import numpy as np
-import pandas as pd
-import seaborn as sns
-import skylynx
-import tqdm
-import numba
 
 def read_req(fname):
 
