@@ -1,4 +1,4 @@
-# https://github.com/basameera/CLI-Utils
+# CLI-Utils
 
 Python based command-line utility package.
 
