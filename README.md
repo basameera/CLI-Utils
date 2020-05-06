@@ -1,4 +1,4 @@
-# bass
+# clu
 
 Python module for handling git easy.
 
@@ -8,18 +8,18 @@ Python module for handling git easy.
 
 **Only Python 3**
 
-**Module can be accessed using both `eg` and `bass` commands**
+**Module can be accessed using both `eg` and `clu` commands**
 
 ``` bash
 $ eg -h
 usage: 
-  bass                  : Git status
-  bass comment          : Git add, commit (with "comment") and push
-  bass -a               : Git Add -A
-  bass -c comment       : Git Commit -m comment
-  bass -p               : Git Push
-  bass -u               : Git Pull
-  bass -b <branch name> : Change branch
+  clu                  : Git status
+  clu comment          : Git add, commit (with "comment") and push
+  clu -a               : Git Add -A
+  clu -c comment       : Git Commit -m comment
+  clu -p               : Git Push
+  clu -u               : Git Pull
+  clu -b <branch name> : Change branch
 
 Easy Git | 2020 Sameera Sandaruwan
 
@@ -37,32 +37,9 @@ optional arguments:
 
 ## Install
 
-1. Clone this repo. ( `git clone https://github.com/basameera/bass.git` )
-1. `cd bass` 
+1. Clone this repo. ( `git clone https://github.com/basameera/clu.git` )
+1. `cd clu` 
 1. `pip install .` 
-
-**Git fetch**
-
-``` 
-UPSTREAM=${1:-'@{u}'}
-LOCAL=$(git rev-parse @)
-REMOTE=$(git rev-parse "$UPSTREAM")
-BASE=$(git merge-base @ "$UPSTREAM")
-
-echo LOCAL : $LOCAL
-echo REMOTE: $REMOTE
-echo BASE : $BASE
-
-if [ $LOCAL = $REMOTE ]; then
-    echo "Up-to-date"
-elif [ $LOCAL = $BASE ]; then
-    echo "Need to pull"
-elif [ $REMOTE = $BASE ]; then
-    echo "Need to push"
-else
-    echo "Diverged"
-fi
-```
 
 ## Ideas
 

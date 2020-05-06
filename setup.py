@@ -1,5 +1,5 @@
 from setuptools import setup
-from bass import __version__, __author__, __author_email__
+from clu import __version__, __author__, __author_email__
 
 def readme():
     with open('README.md') as f:
@@ -8,12 +8,12 @@ def readme():
 
 
 setup(
-    name="bass",
+    name="clu",
     version=__version__,
-    description="Python Easy Git",
+    description="Python based CLI Utils | 2020 Sameera Sandaruwan",
     long_description=readme(),
     long_description_content_type="text/markdown",
-    url="https://github.com/basameera/bass",
+    url="https://github.com/basameera/clu",
     author=__author__,
     author_email=__author_email__,
     license="MIT",
@@ -22,13 +22,13 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",
     ],
-    packages=["bass"],
+    packages=["clu"],
     include_package_data=True,
     # install_requires=["requests"],
     entry_points={
         "console_scripts": [
-            "bass=bass.cli:main",
-            "rk=bass.cli:main",
+            "clu=clu.cli:main",
+            "rk=clu.cli:main",
         ]
     },
 )
