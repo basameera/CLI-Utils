@@ -4,22 +4,30 @@ from .vsr import VERSION
 import os
 
 
-
 def main():
     # create argument parser object
     custom_usage = '\n' + \
-        '  clu  \t\t: Git status\n'
+        '  clu  \t\t: []\n'
+
+    description = "CLI Utils - {} | 2020 Sameera Sandaruwan".format(VERSION)
 
     parser = argparse.ArgumentParser(
-        description="CLI Utils - {} | 2020 Sameera Sandaruwan".format(VERSION), usage=custom_usage)
+        description=description, usage=None)
 
-    parser.add_argument('-a', action='store_true', help="Git Add -A")
+    parser.add_argument('-t', '--time', action='store_true', help="Print current time")
 
-    parser.add_argument('comment', nargs='?', default=None)
+    # parser.add_argument('comment', nargs='?', default=None)
     # parse the arguments from standard input
     args = parser.parse_args()
 
-    print(args.__dict__)
+    # print(args.__dict__)
+
+    if args.time:
+        import time
+        print(time.strftime("%b %d %Y %H:%M:%S", time.gmtime(time.time())))
+
+    else:
+        print(description)
 
 
 if __name__ == "__main__":

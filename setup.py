@@ -10,10 +10,10 @@ def readme():
 setup(
     name="clu",
     version=__version__,
-    description="Python based CLI Utils | 2020 Sameera Sandaruwan",
+    description="Python based CLI-Utils | 2020 Sameera Sandaruwan",
     long_description=readme(),
     long_description_content_type="text/markdown",
-    url="https://github.com/basameera/clu",
+    url="https://github.com/basameera/CLI-Utils",
     author=__author__,
     author_email=__author_email__,
     license="MIT",
