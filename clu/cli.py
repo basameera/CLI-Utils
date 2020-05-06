@@ -38,7 +38,8 @@ def main():
                         help="Print current time")
     parser.add_argument('--pipreqs', action='store_true',
                         help="Generate requirements.txt")
-
+    parser.add_argument('--du', action='store_true',
+                        help="Summarize disk usage, sorted by size (descending).")
     # positional args
     # parser.add_argument('comment', nargs='?', default=None)
 
@@ -61,6 +62,9 @@ def main():
         os.system('pipreqs --force --savepath {} {}'.format(req_file, path_folder))
 
         read_req(req_file)
+    
+    elif args.du:
+        os.system('du -h -d 1 | sort -hr')
 
     else:
         print(u'\U0001f604', description, u'\U0001f604')

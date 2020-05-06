@@ -26,3 +26,9 @@ optional arguments:
 ## Ideas
 
 * pipreqs import handler method in skylynx
+
+## Problems
+
+* import handler doesn't work properly. 
+  * `pipreqs` produce wrong version for `torch`, `torchvision`.
+  * Since my version use `pkg_resources`, the package has to be install for every venv. NOT GOOD.
