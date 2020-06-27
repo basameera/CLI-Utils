@@ -21,7 +21,9 @@ optional arguments:
 
 1. Clone this repo. ( `git clone https://github.com/basameera/CLI-Utils.git` )
 1. `cd clu` 
-1. `pip install .` 
+1. `pip3 install .` 
+1. Add `export PATH=~/.local/bin:$PATH` to `~/.bashrc` file
+1. `source ~/.bashrc`
 
 ## Ideas
 
